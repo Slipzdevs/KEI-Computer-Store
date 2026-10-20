@@ -412,10 +412,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 @media (max-width: 650px) {
   .laptop-filters { grid-template-columns: minmax(0, 1fr); }
   .laptop-filters h3 { grid-column: auto; }
-  .catalog-search input,
-  .catalog-sort select,
-  .filter-panel select,
-  .price-fields input { font-size: 16px; }
 }
 
 
@@ -690,3 +686,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .faq-answer { padding: 0 30px 17px 33px; }
 }
 @media (prefers-reduced-motion: reduce) { .faq-indicator::before, .faq-indicator::after, .faq-question { transition: none; } }
+
+@media (max-width: 650px) {
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]):not([type="color"]):not([type="hidden"]),
+  textarea,
+  select,
+  [contenteditable]:not([contenteditable="false"]) { font-size: 16px !important; }
+}
