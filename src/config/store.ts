@@ -1,13 +1,37 @@
-export const store = {
-  name: 'KEI Computer Store',
-  currency: 'USD',
-  locale: 'Phnom Penh',
-  announcement: 'Thoughtful tech. Expert help. Free shipping over $100.',
-  supportEmail: 'support@example.com',
-  supportPhone: '+1 (000) 000-0000',
-  address: 'Store address to be configured',
+export interface StoreConfig {
+  name: string
+  monogram: string
+  currency: string
+  locale: string
+  announcement: string
+  supportEmail: string
+  supportPhone: string
+  address: string
+  openingHours: string
+  directionsUrl: string
+  policies: { shipping: string; returns: string; faq: string; warranty: string }
   socialLinks: {
-    Telegram: '#',
-    Facebook: '#',
+    telegram: string
+    facebook: string
+    whatsapp: string
+  }
+}
+
+export const store: StoreConfig = {
+  name: 'KEI Computer Store',
+  monogram: 'K',
+  currency: 'USD',
+  locale: 'en-US',
+  announcement: 'Browse computers, components, and accessories for your next setup.',
+  supportEmail: '',
+  supportPhone: '',
+  address: '',
+  openingHours: '',
+  directionsUrl: '',
+  policies: { shipping: '', returns: '', faq: '', warranty: '' },
+  socialLinks: {
+    telegram: '',
+    facebook: '',
+    whatsapp: '',
   },
-} as const
+}
