@@ -30,9 +30,9 @@ export default function App() {
       <Route path="/products" element={<ProductsPage />} />
       <Route path="/products/:slug" element={<ProductDetailPage />} />
       <Route path="/contact" element={<ContactPage />} />
-      <Route path="/shipping" element={<InfoPage title="Shipping information" description={store.policies.shipping || 'Shipping and delivery information has not yet been confirmed by the store.'} isConfigured={Boolean(store.policies.shipping.trim())} />} />
-      <Route path="/returns" element={<InfoPage title="Returns and warranty" description={store.policies.returns || store.policies.warranty || 'Returns and warranty information has not yet been confirmed by the store.'} isConfigured={Boolean(store.policies.returns.trim() || store.policies.warranty.trim())} />} />
-      <Route path="/faq" element={<InfoPage title="Help and FAQs" description={store.policies.faq || 'Store support information has not yet been confirmed.'} isConfigured={Boolean(store.policies.faq.trim())} />} />
+      <Route path="/shipping" element={<InfoPage section="shipping" />} />
+      <Route path="/returns" element={<InfoPage section="returns" />} />
+      <Route path="/faq" element={<InfoPage section="faq" />} />
       <Route path="*" element={<NotFound />} />
     </Route>
   </Routes></Suspense></CatalogProvider></AdminAuthProvider>
